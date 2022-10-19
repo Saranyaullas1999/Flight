@@ -23,10 +23,11 @@ export class AddflightComponent implements OnInit {
         "capacity":this.capacity
       }
       console.log(data)
+      alert("Successfully added")
       this.myapis.addFlight(data).subscribe(
         (response)=>{
           console.log(response)
-          alert("Successfully added")
+          
         }
       )
       this.name=""
