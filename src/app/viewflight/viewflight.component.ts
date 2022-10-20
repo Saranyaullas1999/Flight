@@ -20,6 +20,19 @@ export class ViewflightComponent implements OnInit {
     )
   }
 
+  deleteFlights=(id:any)=>{
+    let data={
+      "id":id
+    }
+    this.myapi.deleteFlight(data).subscribe(
+      (res)=>{
+        alert("Deleted")
+      }
+    )
+    this.fetchData()
+     }
+
+
   flightData:any=[]
 
   ngOnInit(): void {
