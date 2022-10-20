@@ -8,7 +8,8 @@ import { AddflightComponent } from './addflight/addflight.component';
 import { RouterModule,Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ViewflightComponent } from './viewflight/viewflight.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { SearchflightComponent } from './searchflight/searchflight.component'
 
 
 const appRoutes:Routes=[
@@ -17,6 +18,9 @@ const appRoutes:Routes=[
   },
   {
     path:"view",component:ViewflightComponent
+  },
+  {
+    path:"search",component:SearchflightComponent
   }
 ]
 @NgModule({
@@ -24,7 +28,8 @@ const appRoutes:Routes=[
     AppComponent,
     NavbarComponent,
     AddflightComponent,
-    ViewflightComponent
+    ViewflightComponent,
+    SearchflightComponent
   ],
   imports: [
     BrowserModule,
